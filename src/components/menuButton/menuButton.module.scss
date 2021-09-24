@@ -1,0 +1,42 @@
+@import '../../styles/media.scss';
+@import '../../styles/colors.scss';
+
+.menuButton {
+  background: transparent;
+  border: 0;
+  padding: 19px 10px;
+  position: absolute;
+  left: 26px;
+  min-width: auto;
+
+  span,
+  span:after,
+  span:before {
+    border-radius: 1.5px;
+    display: block;
+    height: 3px;
+    background: $violent-dark-color;
+    width: 27px;
+  }
+
+  span {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      top: -8px;
+    }
+    &:after {
+      bottom: -8px;
+    }
+  }
+
+  @media (min-width: $lg) {
+    display: none;
+  }
+}

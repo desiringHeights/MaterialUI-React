@@ -1,0 +1,13 @@
+@import './media';
+
+.main {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+
+
+  @media (min-width: $xl){
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+}

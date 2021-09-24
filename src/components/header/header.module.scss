@@ -1,0 +1,48 @@
+@import '../../styles/colors.scss';
+@import '../../styles/media.scss';
+
+.headerWrapper {
+  background: $background-color;
+  height: 50px;
+  padding: 4px 0 8px;
+
+  @media (min-width: $lg) {
+    height: auto;
+    padding: 0;
+  }
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+  background: $background-color;
+  display: flex;
+
+  @media (min-width: $lg) {
+    justify-content: space-between;
+    padding: 0px $basePadding 6px;
+  }
+
+  @media (min-width: $xl) {
+    max-width: 1710px;
+    margin: 0 auto;
+  }
+}
+
+.headerLogo {
+  margin-top: 6px;
+  height: 34px;
+
+  > div {
+    height: 100%;
+  }
+
+  @media (min-width: $lg) {
+    height: auto;
+
+    > div {
+      height: auto;
+    }
+  }
+
+}

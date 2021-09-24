@@ -1,0 +1,42 @@
+@import '../../styles/colors';
+@import '../../styles/media';
+
+.closeButton {
+  background: transparent;
+  margin-left: auto;
+  margin-right: 19px;
+  border: 0;
+  padding: 10px;
+  height: 41px;
+  min-width: auto;
+  width: 41px;
+
+  span {
+    display: block;
+    height: 21px;
+    position: relative;
+    width: 21px;
+    &:before,
+    &:after {
+      background: $text-color;
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 28px;
+      top: 10px;
+      left: -3px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $lg) {
+    display: none;
+  }
+}

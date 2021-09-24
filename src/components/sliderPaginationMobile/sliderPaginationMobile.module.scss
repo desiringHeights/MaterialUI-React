@@ -1,0 +1,28 @@
+@import '../../styles/media';
+@import '../../styles/colors';
+
+.paginationMobile {
+  justify-content: center;
+  display: flex;
+  margin: 34px 0;
+
+  li {
+    margin: 0 5px;
+  }
+
+  @media (min-width: $lg) {
+    display: none;
+  }
+}
+.button {
+  background: transparent;
+  border: 0.5px solid $violent-color;
+  height: 5px;
+  min-width: initial;
+  padding: 0;
+  transition: background .5s ease;
+  width: 40px;
+}
+.active {
+  background: $violent-color;
+}

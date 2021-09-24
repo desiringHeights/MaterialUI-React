@@ -1,0 +1,43 @@
+@import '../../styles/colors';
+@import '../../styles/media';
+
+.list {
+  font-family: MontserratLight, sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 60px;
+
+  li {
+    font-size: 1rem;
+    line-height: 1.23;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+
+    &:before {
+      content: '';
+      background-image: url('../../assets/images/icons/icon-check.svg');
+      background-size: 18px 12.5px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 12.5px;
+      margin-right: 10px;
+      width: 18px;
+    }
+  }
+
+  @media (min-width: $lg) {
+    //margin-bottom: 50px;
+    li {
+      font-size: 1.625rem; //26px
+      letter-spacing: 1.4px;
+      margin-bottom: 8px;
+
+      &:before {
+        margin-right: 22px;
+        background-size: 26px 18px;
+        height: 18px;
+        width: 26px;
+      }
+    }
+  }
+}

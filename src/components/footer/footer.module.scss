@@ -1,0 +1,86 @@
+@import '../../styles/colors';
+@import '../../styles/media';
+
+.footerWrapper {
+  background-color: $background-color;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  padding: 20px 0 42px;
+  justify-content: center;
+
+  @media (min-width: $lg) {
+    justify-content: space-between;
+    padding: 9px $basePadding 50px;
+  }
+
+  @media (min-width: $xl) {
+    max-width: 1730px;
+    margin: 0 auto;
+  }
+}
+
+.footerMenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0;
+
+  li {
+    margin: 0 2.5px;
+  }
+
+  a {
+    font-size: 0.75rem;
+    color: $blue-color;
+    text-decoration: none;
+  }
+
+  @media (min-width: $lg) {
+    li {
+      margin: 0 12.5px;
+    }
+
+    a {
+      color: $grey-light-color;
+      font-family: 'MontserratMediumItalic', sans-serif;
+      font-size: 0.875rem;
+      transition: color .5s ease;
+
+      &:hover {
+        color: $violent-color
+      }
+    }
+  }
+}
+
+.footerLeft {
+  align-items: center;
+  display: flex;
+}
+
+.footerHide {
+  display: none;
+  @media (min-width: $lg) {
+    display: flex;
+  }
+}
+.footerLogo {
+  margin-left: 30px;
+  margin-right: 6px;
+  height: 50px;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.mobileHide {
+  display: none;
+  @media (min-width: $lg) {
+    display: inherit;
+  }
+}
+

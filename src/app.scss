@@ -1,0 +1,134 @@
+@import-normalize;
+@import './styles/colors';
+@import './styles/media';
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'MontserratLight';
+  src: url(./assets/fonts/Montserrat-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'MontserratSemiBold';
+  src: url(./assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'MontserratMediumItalic';
+  src: url(./assets/fonts/Montserrat-MediumItalic.ttf) format('truetype');
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+#root {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+body {
+  background: $background-color;
+  box-sizing: border-box;
+  color: $text-color;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+  min-width: 320px;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+a:focus {
+  outline: 1px dotted $grey-light-color;
+}
+
+button {
+  border: 2px solid $violent-color;
+  border-radius: 5px;
+  background: $violent-color;
+  box-shadow: none;
+  color: $white-color;
+  font-family: 'MontserratSemiBold', sans-serif;
+  font-size: 1rem;
+  padding: 9px;
+  -webkit-appearance: none;
+  transition: all .5s ease;
+  min-width: 200px;
+
+  &:hover {
+    background-color: $violent-light-color;
+    border-color: $violent-light-color;
+  }
+
+  &:focus {
+    outline: 1px dotted $violent-color;
+  }
+}
+
+.container {
+  padding: 34px 0 84px;
+  margin: 0 40px;
+
+  @media (min-width: $lg) {
+    padding: 72px 0 70px;
+    margin: 0 20px;
+  }
+
+  @media (min-width: $xl) {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}
+
+h2 {
+  font-family: MontserratSemiBold, sans-serif;
+  font-size: 1.375rem;
+  margin-bottom: 36px;
+  letter-spacing: 1px;
+
+  @media (min-width: $lg) {
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+  }
+}
+
+p {
+  font-family: MontserratLight, sans-serif;
+  font-size: 1.25rem; //18px
+  line-height: 1.5;
+
+  @media (min-width: $lg) {
+    font-size: 1.5rem; //24px
+  }
+}
+
+.text-medium {
+  font-size: 1.125rem; //18px
+  line-height: 1.6;
+  letter-spacing: 1px;
+
+  @media (min-width: $lg) {
+    line-height: 1.23;
+    letter-spacing: 1.6px;
+    font-size: 1.625rem; //26px
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
